@@ -1,0 +1,280 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    font-style: normal;
+}
+
+/* Header Design */
+
+nav {
+    background-color: rgb(78, 225, 235);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 28px;
+    font-weight: bold;  
+}
+
+.button {
+    background-color: rgb(183, 170, 89);
+    color: black;
+    font-size: 22px;
+    font-weight: lighter;
+    padding: 5px;
+    width: 3.5cm;
+    border: none;
+    text-align: center;
+    margin: 2px;
+}
+
+nav a:hover {
+    background-color: rgb(30, 201, 248);
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(52, 225, 237);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+    padding: 6%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu_button {
+    display: none;
+}
+
+/* Heading Design */
+.heading {
+    display: flex;
+    background-image: url('/assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading_content {
+    font-size: 24px;
+    text-align: center;
+    color: black;
+}
+
+.sub_heading_content {
+    font-size: 22px;
+    font-weight: lighter;
+    text-align: center;
+    color: black;
+    margin-top: 3%;
+}
+
+.button_learn_more {
+    margin-top: 3cm;
+}
+
+.button_learn_more button {
+    background-color: black;
+    color: antiquewhite;
+    width: 6cm;
+    font-size: 20px;
+    font-weight: lighter;
+    height: 1cm;
+}
+
+.button_learn_more button:hover {
+    background-color: rgb(64, 69, 69);
+}
+
+/* Other Content */
+.other {
+    display: flex;
+    background-color: rgb(248, 250, 250);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.other_container {
+    display: inline;
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+}
+
+.other_content {
+    width: 15cm;
+    font-size: 20px;
+    text-align: start;
+    color: black;
+    margin: 5%;
+}
+
+/* Footer Design */
+.footer {
+    background-color: rgb(78, 225, 235);
+    padding: 20px 0;
+}
+
+.container_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.footer-item {
+    color: black;
+    font-size: 22px;
+    font-weight:normal;
+    margin: 10px 3cm 10px;
+}
+
+/* Media Queries */
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .menu_button {
+        display: none;
+    }
+    .heading_content {
+        font-size: 28px;
+    }
+    .sub_heading_content {
+        font-size: 24px;
+    }
+    .button_learn_more button {
+        font-size: 22px;
+        width: 8cm;
+    }
+    .other {
+        height: 400px;
+    }
+    .other_content {
+        font-size: 22px;
+        width: 18cm;
+    }
+    .footer-item {
+        font-size: large;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    nav a {
+        padding: 0 15px;
+        font-size: 22px;
+        font-weight: lighter;
+    }
+    .menu_button {
+        display: none;
+    }
+    .heading {
+        height: 500px;
+    }
+    .heading_content {
+        font-size: 22px;
+    }
+    .sub_heading_content {
+        font-size: 20px;
+    }
+    .button_learn_more button {
+        font-size: 20px;
+        width: 7cm;
+    }
+    .other {
+        height: 450px;
+    }
+    .other_content {
+        font-size: 26px;
+        width: 16cm;
+    }
+    .footer-item {
+        font-size: medium;
+    }
+}
+
+/* Phone */
+@media (max-width: 768px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu_button {
+        display: block;
+    }
+    .heading {
+        height: 300px;
+    }
+    .heading_content {
+        font-size: 18px;
+        margin-top: 1cm;
+    }
+    .sub_heading_content {
+        font-size: 16px;
+    }
+
+    .button_learn_more {
+        margin-top: 1cm;
+    }
+    .button_learn_more button {
+        font-size: 18px;
+        width: 6cm;
+    }
+    .other {
+        flex-direction: column;
+        height: auto;
+    }
+    .other_content {
+        font-size: 20px;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .footer-item {
+        margin: 20px;
+        font-size: small;
+    }
+}
